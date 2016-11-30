@@ -58,22 +58,6 @@ def get_color(position, row):
 colors = ["cyan","purple","red","green","blue","yellow","c","p","r","g","b","y"]
 board = initialize_board()
 
-print_board(board)
-get_color(0,0)
-print_board(board)
-get_color(1,0)
-print_board(board)
-get_color(2,0)
-print_board(board)
-get_color(3,0)
-print_board(board)
-get_color(0,1)
-print_board(board)
-get_color(1,1)
-print_board(board)
-get_color(2,1)
-print_board(board)
-
 
 
 #initialize_board()
