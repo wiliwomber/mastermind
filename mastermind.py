@@ -1,5 +1,6 @@
 #author Gabe & JOJO
 import time
+import random
 
 def print_board(board):
     print ("This is the board")
@@ -46,7 +47,7 @@ def get_color(position, row):
         if colors.index(color)>5:
             color = colors[(colors.index(color)-6)]
         board[position][(11-row)]= color #11-row to set start printing at the bottom of the board
-        return True
+        return color
     else:
         print ('\x1b[1A\x1b[2K\x1b[1A')
         print ("Not a valid color, try again")
@@ -54,9 +55,34 @@ def get_color(position, row):
         print ('\x1b[1A\x1b[2K\x1b[1A')
         return get_color(position, row)
 
+def gen_secretcode():
+    print ("This is the secret code")
+    secretcode = random.sample(colors,4) # picks 4 random values from the array 'colors'
+    print (secretcode)
+    return secretcode
+
+# def guess_vs_secretcode(color):
+#    if color in scode:
+#        pegpoints=+ 1
+#    elif colors(colors.index(color) + 6) in scode:
+#        pegpoints=+ 1
+#    elif colors(colors.index(color) - 6) in scode:
+#        pegpoints=+ 1
+#    return pegpoints
+
+
 #set variable
 colors = ["cyan","purple","red","green","blue","yellow","c","p","r","g","b","y"]
 board = initialize_board()
+scode = gen_secretcode()
+
+
+for turn in range(12):
+    pegpoints = 0
+    for guess in range(4):
+        print_board(board)
+        get_color(guess,turn)
+
 
 
 
