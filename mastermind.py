@@ -56,6 +56,8 @@ def get_color(position, row):
 
 #set variable
 colors = ["cyan","purple","red","green","blue","yellow","c","p","r","g","b","y"]
+#secret solution pattern
+#hit list   + (1)  - (0.2)
 board = initialize_board()
 
 
