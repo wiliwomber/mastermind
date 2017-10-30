@@ -1,8 +1,2 @@
-
-
-test = input()
-if test == '\x0D':
-    print('enter')
-
-
-test
+from random import randint
+print(randint(0, 24)+1)
