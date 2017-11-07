@@ -82,7 +82,7 @@ function submit() {
 	}
 	if (allGuessesSet) {
 		$('#submitButtonContainer').show('slide', {direction: 'right'}, 1000);
-		$('.submitButton').click(finishRound);
+		$('.submitButton').off().click(finishRound); ///wird je aufruf der if-schleife nochmal aufgerufen
 	}
 }
 
@@ -106,28 +106,42 @@ function generateScode(){
 	let availableColors = ['purple','blue','green','yellow','orange','red'];
 	for (let i = 0; i < 4; i++){
 		scode[i] = availableColors[(Math.floor(Math.random() * 5))];
-		console.log(scode[i])
+		console.log(scode[i]);
 	}
 	return scode;
 }
+
+
 function generateFeedback(){
 	let rightPlace = 0;
 	let rightColor = 0;
 	//create temp arrays to compare witheach other
 	let tempScode = scode.slice(0);
 	let currentRow = new Array(4);
-	for (let i = 0; i < 4; i++){
+	for (let i = 4; i > 0; i--){
+		//make copy of current row
 		currentRow[i] = board[round][i];
-		console.log(currentRow[i]);
+		//check if right positions are given
+		if (currentRow[i] == tempScode[i]){
+			rightPlace++;
+			currentRow.slice(i,1);
+			tempScode.slice(i,1);
+		}
 	}
+		// check if right colors are given
+		for (let i = 0; i < currentRow.length; i++){
+			for (let m = 0; m < tempScode.length; m++){
+				if (currentRow[i] == tempScode[m]){
+					tempScode.slice(i,1);
+					rightColor++;
+					break;
+				}
+			}
+		}
+		console.log('RP: ' + rightPlace + 'RC: ' + rightColor);
+
+
 /*
-    # Check if right positions are given
-    for i in range(4):
-        # comparison goes backwards so that wont point out of index
-        if row_scode[3-i] == row_given[3-i]:
-            right_place += 1
-            row_given.pop(3-i)
-            row_scode.pop(3-i)
 
     # Check if right colors are on the board
     for color_given in row_given:

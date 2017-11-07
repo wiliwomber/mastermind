@@ -33,24 +33,34 @@
 img {
     max-width: 100%;
     max-height: 100%;
-	-webkit-user-drag: none; 
-  	-khtml-user-drag: none; 
-  	-moz-user-drag: none; 
-  	-o-user-drag: none; 
-  	user-drag: none;	
+	-webkit-user-drag: none;
+  	-khtml-user-drag: none;
+  	-moz-user-drag: none;
+  	-o-user-drag: none;
+  	user-drag: none;
 	margin-left: auto;
 	margin-right: auto;
 }
 #colorsContainer img {
-	-webkit-user-drag: element; 
-  	-khtml-user-drag: element; 
-  	-moz-user-drag: element; 
-  	-o-user-drag: element; 
+	-webkit-user-drag: element;
+  	-khtml-user-drag: element;
+  	-moz-user-drag: element;
+  	-o-user-drag: element;
   	user-drag: element;
 	cursor: move;
 }
 
+.feedback {
+	margin: auto;
+	width: 15px;
+	height: 15px;
+	margin-left: 2px;
+	background-image: url(../images/emptyFeedback.png);
+	background-repeat: no-repeat;
+	background-size: cover;
 
+}
+	
 .position {
 	margin: auto;
 	width: 25px;
@@ -89,7 +99,7 @@ img {
 	text-decoration: none;
 	text-shadow: 0px 0px 0px #528ecc;
 	margin: auto;
-	text-align: center;	
+	text-align: center;
 }
 .submitButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
@@ -113,5 +123,3 @@ img {
 	float: right;
 	margin-right: 3px;
 }
-
-
