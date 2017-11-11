@@ -1,0 +1,313 @@
+<!--
+Todos
+- drag leave sometimes doesnt work
+
+-->
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mastermind</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/mastermind.js"></script>
+</head>
+
+<body>
+<div><h1>Mastermind</h1></div>
+<div id="boardContainer">
+<div class="completed">
+  <p>You're a<br>
+  </p>
+  <p id='biggerFont'>Mastermind! </p>
+<div id="replay">Replay</div>
+</div>
+  <table id="boardDivision">
+	<tr>
+		<td width="22%" height="91%">
+		<div id="feedbackContainer">
+      <table width="100%" height="100%" border="0">
+		    <tbody>
+          <tr>
+		        <td>
+                <table align='right' class="round11">
+                  <tr>
+                    <td><div class="feedback" id="f1"></div></td>
+                    <td><div class="feedback" id="f2"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="feedback" id="f3"></div></td>
+                    <td><div class="feedback" id="f4"></div></td>
+                  </tr>
+                </table>
+            </td>
+	          </tr>
+            <tr>
+  		        <td>
+                  <table align='right' class="round10">
+                    <tr>
+                      <td><div class="feedback" id="f1"></div></td>
+                      <td><div class="feedback" id="f2"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="feedback" id="f3"></div></td>
+                      <td><div class="feedback" id="f4"></div></td>
+                    </tr>
+                  </table>
+              </td>
+  	          </tr>
+              <tr>
+    		        <td>
+                    <table align='right' class="round9">
+                      <tr>
+                        <td><div class="feedback" id="f1"></div></td>
+                        <td><div class="feedback" id="f2"></div></td>
+                      </tr>
+                      <tr>
+                        <td><div class="feedback" id="f3"></div></td>
+                        <td><div class="feedback" id="f4"></div></td>
+                      </tr>
+                    </table>
+                </td>
+   	          </tr>
+                <tr>
+      		        <td>
+                      <table align='right' class="round8">
+                        <tr>
+                          <td><div class="feedback" id="f1"></div></td>
+                          <td><div class="feedback" id="f2"></div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="feedback" id="f3"></div></td>
+                          <td><div class="feedback" id="f4"></div></td>
+                        </tr>
+                      </table>
+                  </td>
+   	          </tr>
+                  <tr>
+        		        <td>
+                        <table align='right' class="round7">
+                          <tr>
+                            <td><div class="feedback" id="f1"></div></td>
+                            <td><div class="feedback" id="f2"></div></td>
+                          </tr>
+                          <tr>
+                            <td><div class="feedback" id="f3"></div></td>
+                            <td><div class="feedback" id="f4"></div></td>
+                          </tr>
+                        </table>
+                    </td>
+   	          </tr>
+                    <tr>
+          		        <td>
+                          <table align='right' class="round6">
+                            <tr>
+                              <td><div class="feedback" id="f1"></div></td>
+                              <td><div class="feedback" id="f2"></div></td>
+                            </tr>
+                            <tr>
+                              <td><div class="feedback" id="f3"></div></td>
+                              <td><div class="feedback" id="f4"></div></td>
+                            </tr>
+                          </table>
+                      </td>
+   	          </tr>
+                      <tr>
+            		        <td>
+                            <table align='right' class="round5">
+                              <tr>
+                                <td><div class="feedback" id="f1"></div></td>
+                                <td><div class="feedback" id="f2"></div></td>
+                              </tr>
+                              <tr>
+                                <td><div class="feedback" id="f3"></div></td>
+                                <td><div class="feedback" id="f4"></div></td>
+                              </tr>
+                            </table>
+                        </td>
+   	          </tr>
+                        <tr>
+              		        <td>
+                              <table align='right' class="round4">
+                                <tr>
+                                  <td><div class="feedback" id="f1"></div></td>
+                                  <td><div class="feedback" id="f2"></div></td>
+                                </tr>
+                                <tr>
+                                  <td><div class="feedback" id="f3"></div></td>
+                                  <td><div class="feedback" id="f4"></div></td>
+                                </tr>
+                              </table>
+                          </td>
+   	          </tr>
+                          <tr>
+                		        <td>
+                                <table align='right' class="round3">
+                                  <tr>
+                                    <td><div class="feedback" id="f1"></div></td>
+                                    <td><div class="feedback" id="f2"></div></td>
+                                  </tr>
+                                  <tr>
+                                    <td><div class="feedback" id="f3"></div></td>
+                                    <td><div class="feedback" id="f4"></div></td>
+                                  </tr>
+                                </table>
+                            </td>
+   	          </tr>
+                            <tr>
+                  		        <td>
+                                  <table align='right' class="round2">
+                                    <tr>
+                                      <td><div class="feedback" id="f1"></div></td>
+                                      <td><div class="feedback" id="f2"></div></td>
+                                    </tr>
+                                    <tr>
+                                      <td><div class="feedback" id="f3"></div></td>
+                                      <td><div class="feedback" id="f4"></div></td>
+                                    </tr>
+                                  </table>
+                              </td>
+   	          </tr>
+                              <tr>
+                    		        <td>
+                                    <table align='right' class="round1">
+                                      <tr>
+                                        <td><div class="feedback" id="f1"></div></td>
+                                        <td><div class="feedback" id="f2"></div></td>
+                                      </tr>
+                                      <tr>
+                                        <td><div class="feedback" id="f3"></div></td>
+                                        <td><div class="feedback" id="f4"></div></td>
+                                      </tr>
+                                    </table>
+                                </td>
+   	          </tr>
+                      		      <tr>
+                      		        <td>
+                                      <table align='right' class="round0">
+                                        <tr>
+                                          <td><div class="feedback" id="f1"></div></td>
+                                          <td><div class="feedback" id="f2"></div></td>
+                                        </tr>
+                                        <tr>
+                                          <td><div class="feedback" id="f3"></div></td>
+                                          <td><div class="feedback" id="f4"></div></td>
+                                        </tr>
+                                      </table>
+                                  </td>
+                      	          </tr>
+	        </tbody>
+	      </table>
+		</div>
+
+
+		</td>
+		<td width="78%" height="91%">
+		<div id="guessContainer">
+    <table height="100%" width="100%">
+      <tbody>
+        <tr>
+          <td><div class="position" id="44"></div></td>
+          <td><div class="position" id="45"></div></td>
+          <td><div class="position" id="46"></div></td>
+          <td><div class="position" id="47"></div></td>
+        </tr>
+        <tr>
+          <td><div class="position" id="40"></div></td>
+          <td><div class="position" id="41"></div></td>
+          <td><div class="position" id="42"></div></td>
+          <td><div class="position" id="43"></div></td>
+        </tr>
+		<tr>
+          <td><div class="position" id="36"></div></td>
+          <td><div class="position" id="37"></div></td>
+          <td><div class="position" id="38"></div></td>
+          <td><div class="position" id="39"></div></td>
+        </tr>
+        <tr>
+          <td><div class="position" id="32"></div></td>
+          <td><div class="position" id="33"></div></td>
+          <td><div class="position" id="34"></div></td>
+          <td><div class="position" id="35"></div></td>
+        </tr>
+		<tr>
+          <td><div class="position" id="28"></div></td>
+          <td><div class="position" id="29"></div></td>
+          <td><div class="position" id="30"></div></td>
+          <td><div class="position" id="31"></div></td>
+        </tr>
+        <tr>
+          <td><div class="position" id="24"></div></td>
+          <td><div class="position" id="25"></div></td>
+          <td><div class="position" id="26"></div></td>
+          <td><div class="position" id="27"></div></td>
+        </tr>
+		<tr>
+          <td><div class="position" id="20"></div></td>
+          <td><div class="position" id="21"></div></td>
+          <td><div class="position" id="22"></div></td>
+          <td><div class="position" id="23"></div></td>
+        </tr>
+        <tr>
+          <td><div class="position" id="16"></div></td>
+          <td><div class="position" id="17"></div></td>
+          <td><div class="position" id="18"></div></td>
+          <td><div class="position" id="19"></div></td>
+        </tr>
+	    <tr>
+          <td><div class="position" id="12"></div></td>
+          <td><div class="position" id="13"></div></td>
+          <td><div class="position" id="14"></div></td>
+          <td><div class="position" id="15"></div></td>
+        </tr>
+        <tr>
+          <td><div class="position" id="8"></div></td>
+          <td><div class="position" id="9"></div></td>
+          <td><div class="position" id="10"></div></td>
+          <td><div class="position" id="11"></div></td>
+        </tr>
+        <tr>
+          <td><div class="position" id="4"></div></td>
+          <td><div class="position" id="5"></div></td>
+          <td><div class="position" id="6"></div></td>
+          <td><div class="position" id="7"></div></td>
+        </tr>
+        <tr>
+          <td><div class="position" id="0"></div></td>
+          <td><div class="position" id="1"></div></td>
+          <td><div class="position" id="2"></div></td>
+          <td><div class="position" id="3"></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" width="100%" height="9%">
+		<div id="colorsContainer"><table width="100%" height="50px">
+  <tbody>
+    <tr>
+	  <td></td>
+      <td><img src="images/purple.png" class="color" id="purple"/></td>
+      <td><img src="images/blue.png" class="color" id="blue"/></td>
+      <td><img src="images/green.png" class="color" id="green"/></td>
+      <td><img src="images/yellow.png" class="color" id="yellow"/></td>
+      <td><img src="images/orange.png" class="color" id="orange"/></td>
+      <td><img src="images/red.png" class="color" id="red"/></td>
+      <td><div id='submitButtonContainer' class="submitButton">&#11014;</div></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+		</td>
+	</tr>
+</table>
+</div>
+</body>
+</html>
